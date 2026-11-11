@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: domains-square-program
+    runtime: static
+    buildCommand: echo "Static site - no build needed"
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
